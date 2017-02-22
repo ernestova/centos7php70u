@@ -2,7 +2,7 @@ FROM centos:latest
 MAINTAINER Ernesto Vargas <ernesto_vargas@yahoo.com>
 
 # Install dependencies
-RUN rpm -i http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+RUN yum -y install epel-release; yum clean all
 RUN rpm -i https://dl.iuscommunity.org/pub/ius/stable/CentOS/7/x86_64/ius-release-1.0-14.ius.centos7.noarch.rpm
 RUN rpm -i http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 RUN yum install -y php70u php70u-fpm php70u-cli php70u-devel php70u-gd \
